@@ -1,0 +1,11 @@
+3 
+undefined because its in its own scope
+
+4 
+It wont change to Jeo because its a const not a variable and would result in an error 
+
+5
+bar because foo was defined outside the scope of the other foo
+
+6
+no same as other one 
