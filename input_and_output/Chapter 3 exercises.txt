@@ -1,0 +1,19 @@
+1
+// Node solution 
+let readlineSync = require('readline-sync');
+let name = readlineSync.question('What is your name? ');
+console.log(`Hello, ${name}!`);
+
+
+// Browser solution
+let name = prompt('What is your name? ');
+console.log(`Hello, ${name}!`);
+
+2
+
+let readlineSync = require('readline-sync');
+let firstName = readlineSync.question('What is your first name? ');
+let lastName = readlineSync.question('What is your last name? ');
+console.log(`Hello, ${firstName} ${lastName}!`);
+
+3
