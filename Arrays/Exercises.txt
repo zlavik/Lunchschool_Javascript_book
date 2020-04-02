@@ -1,0 +1,95 @@
+1:
+let array1 = [1, 2, undefined, 4]; 4
+
+let array2 = [1];
+array2.length = 5; 5
+
+let array3 = [];
+array3[-1] = [1]; 0
+
+let array4 = [1, 2, 3, 4, 5];
+array4.length = 3; 3
+
+let array5 = []; 101
+array5[100] = 3;
+
+2:
+for (let i = 0; i < myArray.length; i += 1) {
+  let value = myArray[i];
+  if (value % 2 === 0) {
+    console.log(value); // => 6, 4, 2, 4, 16, 0
+  }
+}
+
+3:
+for (let i = 0; i < myArray.length; i += 1) {
+  for (let j = 0; j < myArray[i].length; j += 1) {
+    let value = myArray[i][j];
+    if (value % 2 === 0) {
+      console.log(value); // => 6, 4, 2, 4, 16, 0
+    }
+  }
+}
+
+4:
+let newArray = myArray.map(function(value) {
+  if (value % 2 === 0) {
+    return 'even';
+  } else {
+    return 'odd';
+  }
+});
+
+5:
+function removeNonInteger(array) {
+  return array.filter(function(element) {
+    return Number.isInteger(element);
+  });
+}
+
+6:
+function oddLengths(arr) {
+  let filteredNumbersArray = arr.map((letters) => {
+    return letters.length;
+  }).filter((number) => {
+    return number % 2 === 1;
+  });
+
+  return filteredNumbersArray;
+}
+
+let arr = ['a', 'abcd', 'abcde', 'abc', 'ab'];
+console.log(oddLengths(arr));
+
+7:
+function sumOfSquares(numbers) {
+  return numbers.reduce((accumulator, number) => {
+    return accumulator + number * number;
+  }, 0);
+}
+
+let numbers = [3, 5, 7];
+console.log(sumOfSquares(numbers)); // => 83
+
+8:
+function oddLengths(arr) {
+  return arr.reduce((filteredNumbersArray, letters) => {
+    let length = letters.length;
+    if (length % 2 === 1) {
+      filteredNumbersArray.push(length);
+    }
+
+    return filteredNumbersArray;
+  }, []);
+}
+
+let arr = ['a', 'abcd', 'abcde', 'abc', 'ab'];
+console.log(oddLengths(arr));
+
+9:
+numbers1.includes(3);  // => true
+numbers2.includes(3);  // => false
+numbers3.includes(3);  // => false
+
+10:
+arr[1][2];
